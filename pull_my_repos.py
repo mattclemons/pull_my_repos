@@ -29,7 +29,7 @@ def clone_repos():
 
         for repo in repos:
             if not repo['fork']:  # Exclude forked repositories
-                clone_url = repo['clone_url']
+                clone_url = repo['ssh_url']
                 print(f"Cloning {clone_url}...")
                 call(['git', 'clone', clone_url])
 
